@@ -26,4 +26,10 @@ public class AudioFile {
 
   @ManyToOne
   private Phrase phrase;
+
+  public AudioFile(String filePath, User user, Phrase phrase) {
+    this.filePath = filePath;
+    this.user = user;
+    this.phrase = phrase;
+  }
 }
