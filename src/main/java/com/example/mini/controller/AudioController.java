@@ -31,7 +31,7 @@ public class AudioController {
       @RequestParam("audio_file") MultipartFile audioFile) throws IOException {
 
     final AudioFileDto audioFileDto = audioService.saveAudioFile(userId, phraseId, audioFile);
-    return ResponseEntity.ok("File uploaded successfully");
+    return ResponseEntity.ok("File uploaded successfully " +audioFileDto.getFilePath());
   }
 
   @GetMapping("/user/{userId}/phrase/{phraseId}/{audioFormat}")
